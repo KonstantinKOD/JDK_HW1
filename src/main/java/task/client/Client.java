@@ -30,7 +30,7 @@ public class Client extends JFrame {
         setTitle("Chat client");
         setLocation(server.getX() - 500, server.getY()); // изменение появление окна клиента относительно окна сервера
 
-        server.createPanel();
+        createPanel();
 
         setVisible(true);
     }
@@ -90,6 +90,7 @@ public class Client extends JFrame {
     private void createPanel(){
         add(createHeaderPanel(), BorderLayout.NORTH);
         add(createLog());
+        add(createFooter(), BorderLayout.SOUTH);
 
     }
 
@@ -99,7 +100,7 @@ public class Client extends JFrame {
         // добавление произвольной инфы в виджеты
         tfIPAdress=new JTextField("127.0.0.1");
         tfPort=new JTextField("8189");
-        tfLogin = new JTextField("Ivan Ivanovich");
+        tfLogin = new JTextField();
         password=new JPasswordField("123");
         btLogin=new JButton("Login"); // кнопка Login(залогиниться) подключает к серверу
         btLogin.addActionListener(new ActionListener() {

@@ -44,7 +44,7 @@ public class ServerWindow extends JFrame {
 //        panButton.add(btStart);
 //        panButton.add(btStop);
 //        add(panButton, BorderLayout.SOUTH);
-//        setVisible(true);
+        setVisible(true);
     }
 
     // метод получения переписки(с прошлого раза/разов)
